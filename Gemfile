@@ -1,12 +1,23 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'bootstrap-sass'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails'
+end
 
-gem 'sqlite3'
+group :production do
+  gem 'pg', '>= 0.12.2'
+end
 
+group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
