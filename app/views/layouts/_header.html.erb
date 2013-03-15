@@ -1,0 +1,18 @@
+<div class="row-fluid">
+	<%= form_tag('#', method: :post, class: 'form-horizontal', ) do %>
+		<div class="control-group">
+			<%= label_tag :keyword, "Keyword to search"%>
+			<div class="input-append">
+				<%= text_field_tag :keyword%>
+				<%= submit_tag "Search", class: "btn" %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= label_tag :search_type, 'Reddit', class: "radio inline"%>
+			<%= radio_button_tag :search_type, 'reddit', true %>
+					
+			<%= label_tag :search_type, 'Twitter', class: "radio inline"%>
+			<%= radio_button_tag :search_type, 'twitter'%>
+		</div>
+	<% end %>
+</div>
