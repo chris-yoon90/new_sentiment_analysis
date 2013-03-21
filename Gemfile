@@ -15,7 +15,7 @@ group :production do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '1.1.4'
   gem 'factory_girl_rails'
 end
 
