@@ -1,8 +1,8 @@
 class ApiQueryController < ApplicationController
   
   def create
-   
-    @result = get_search_result
+    hash = get_search_result
+    @result = hash['results']
     
     render 'new'
   end

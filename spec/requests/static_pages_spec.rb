@@ -22,23 +22,13 @@ describe "StaticPages" do
   end
   
   describe "After twitter Search" do
-    before do
-      visit root_path
-      fill_in "keyword", with: "Google"
-      choose "search_type_twitter"
-      click_button "Search"
-    end
+    before { searchType("twitter") }
     let(:page_title) {'twitter search - Google'}
     it_should_behave_like "all static pages"
   end
   
   describe "After reddit Search" do
-    before do
-      visit root_path
-      fill_in "keyword", with: "Google"
-      choose "search_type_reddit"
-      click_button "Search"
-    end
+    before { searchType("reddit")}
     let(:page_title) {'reddit search - Google'}
     it_should_behave_like "all static pages"
   end
